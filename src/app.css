@@ -2,19 +2,65 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.logo{
+  width: 200px;
+  height: auto;
+}
+
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: blue;
-  border: 2px solid navy;
-  padding: 1rem;
-  gap: 1rem;
+  background-color: #84D3F2;
+  padding: 0rem;
+  gap: .2rem;
 }
 
 .navbar a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
+  position: relative;
+  text-decoration: none; 
+  padding-bottom: 5px;
 }
 
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #417FA6;
+  transition: width 0.3s ease-out;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #417FA6;
+}
+
+.navbar a.active {
+  color: #417FA6; /* Active link text color */
+}
+
+.menu{
+  display: flex;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+}
