@@ -74,7 +74,9 @@ body {
 }
 
 section {
-    height: 100vh; /* altura da viewport */
-    padding-top: 6rem; /* Compensa altura da navbar fixa (~96px) */  
+    min-height: 65vh; /* altura minima para cada secao --> excluir se necessario */
+    width: 100%;
+    scroll-margin-top: 6rem;
   }
+  
 

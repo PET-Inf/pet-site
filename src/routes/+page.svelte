@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+  import Inicio from '$lib/sections/Inicio.svelte';
 	import Sobre from '$lib/sections/Sobre.svelte';
 	import Historia from '$lib/sections/Historia.svelte';
 	import Projetos from '$lib/sections/Projetos.svelte';
@@ -10,21 +11,24 @@
 </script>
 
 <nav class="navbar">
-	<a href="#sobre">
+	<a href="#inicio">
 		<img src="/logo_PET.png" alt="Logo" class="logo" />
 	</a>
 	<ul class="menu">
 		<a href="#sobre">Sobre</a>
-		<a href="#historia">História</a>
 		<a href="#projetos">Projetos</a>
-		<a href="#talks">Talks</a>
+		<a href="#historia">História</a>
 		<a href="#equipe">Nossa Equipe</a>
 		<a href="#galeria">Galeria</a>
+    <a href="#talks">Talks</a>
 		<a href="#contato">Contato</a>
 	</ul>
 </nav>
 
 <main>
+  <section id = "inicio">
+    <Inicio />
+  </section>
   <section id="sobre">
     <Sobre />
   </section>
