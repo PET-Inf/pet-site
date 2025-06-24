@@ -21,6 +21,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
+  height: 6rem;
 
   display: flex;
   justify-content: space-evenly;
@@ -29,7 +30,7 @@ body {
   padding: 0rem;
   gap: .2rem;
 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve para destacar */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
@@ -64,6 +65,44 @@ body {
   color: #417FA6; /* Active link text color */
 }
 
+/* Container do botão para posicionar o dropdown */
+.menu-toggle-wrapper {
+  position: relative; 
+}
+
+/* Ícone de menu (hambúrguer) */
+.menu-toggle {
+  display: none; /* isso faz com que ele fique "escondido" para desktops */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* logo abaixo do botão */
+  left: 0;
+  background-color: #84D3F2;
+  padding: 0.3rem 0;
+  width: 16rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1100;
+}
+
+.dropdown a {
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dropdown a:last-child {
+  margin-bottom: 0; /* remove margem extra no último item */
+}
+
 .menu{
   display: flex;
   position: relative;
@@ -74,9 +113,20 @@ body {
 }
 
 section {
-    min-height: 65vh; /* altura minima para cada secao --> excluir se necessario */
-    width: 100%;
-    scroll-margin-top: 6rem;
+  min-height: 65vh; /* altura minima para cada secao --> excluir se necessario */
+  width: 100%;
+  scroll-margin-top: 6rem;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 767px) {
+  .menu {
+    display: none;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+}
   
 
