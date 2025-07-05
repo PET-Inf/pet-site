@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #84D3F2;
+  background-color: #1A447C;
   padding: 0rem;
   gap: .2rem;
 
@@ -86,7 +86,7 @@ body {
   position: absolute;
   top: 100%; /* logo abaixo do botão */
   left: 0;
-  background-color: #84D3F2;
+  background-color: #1A447C;
   padding: 0.3rem 0;
   width: 16rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -113,7 +113,7 @@ body {
 }
 
 section {
-  min-height: 65vh; /* altura minima para cada secao --> excluir se necessario */
+  /*min-height: 65vh; /* altura minima para cada secao --> excluir se necessario */
   width: 100%;
   scroll-margin-top: 6rem;
 }
