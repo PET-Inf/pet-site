@@ -2,19 +2,69 @@
   // Mudar aqui quando for preciso atualizar a lista de membros
   const slides = [
     {
-      imgSrc: "https://placehold.co/600x400",
-      altText: "Foto do Membro 1",
-      description: "Fulano de Tal - Bolsista"
+      imgSrc: "/equipe/milene.png",
+      altText: "Foto da Milene",
+      description: "Coordenadora - Milene Silveira"
     },
     {
-      imgSrc: "https://placehold.co/600x400",
-      altText: "Foto da Membro 2",
-      description: "Ciclana da Silva - Voluntária"
+      imgSrc: "/equipe/amanda.jpg",
+      altText: "Foto da Amanda",
+      description: "Amanda Luiz"
     },
     {
-      imgSrc: "https://placehold.co/600x400",
-      altText: "Foto do Membro 3",
-      description: "Beltrano Souza - Tutor"
+      imgSrc: "/equipe/ana.png",
+      altText: "Foto da Ana",
+      description: "Ana Schmitt"
+    },
+    {
+      imgSrc: "/equipe/eduardo.jpg",
+      altText: "Foto do Eduardo",
+      description: "Eduardo Traunig"
+    },
+    {
+      imgSrc: "/equipe/erickmachado.jpg",
+      altText: "Foto do Erick",
+      description: "Erick Machado"
+    },
+    {
+      imgSrc: "/equipe/francine.jpg",
+      altText: "Foto da Francine",
+      description: "Francine Delanni"
+    },
+    {
+      imgSrc: "/equipe/gabriel.jpg",
+      altText: "Foto do Gabriel Bremm",
+      description: "Gabriel Bremm"
+    },
+    {
+      imgSrc: "/equipe/gabrieltomaz.jpg",
+      altText: "Foto do Gabriel Tomaz",
+      description: "Gabriel Tomaz"
+    },
+    {
+      imgSrc: "/equipe/gustavo.png",
+      altText: "Foto do Gustavo",
+      description: "Gustavo Gallo"
+    },
+    {
+      imgSrc: "/equipe/joaogabriel.jpg",
+      altText: "Foto do Joao Gabriel",
+      description: "João Gabriel"
+    },
+    {
+      imgSrc: "/equipe/mauricio.jpg",
+      altText: "Foto do Mauricio",
+      description: "Maurício Alcântara"
+    },
+    {
+      imgSrc: "/equipe/stefano.png",
+      altText: "Foto do Stefano",
+      description: "Stéfano Carraro"
+    },
+    {
+      imgSrc: "/equipe/vinicius.jpg",
+      altText: "Foto do Vinicius",
+      description: "Vinícius Ross"
     }
   ];
 
@@ -70,7 +120,7 @@
 
   .carrossel-container {
     position: relative;
-    max-width: 800px;
+    max-width: 500px;
     width: 95%; 
     overflow: hidden;
     border-radius: 10px;
@@ -92,7 +142,7 @@
     width: 100%;
     display: block;
     max-height: 450px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .carrossel-item p {
