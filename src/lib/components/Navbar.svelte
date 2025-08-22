@@ -25,7 +25,7 @@
     {/if}
   </div>
 
-  <a href="/#inicio">
+  <a href="/#inicio" class = "logo-link">
     <img src="/logo_PET.png" alt="Logo" class="logo" />
   </a>
 

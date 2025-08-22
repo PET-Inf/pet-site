@@ -15,6 +15,15 @@ body {
   height: auto;
 }
 
+.logo-link:hover {
+  color: inherit;   
+}
+
+.logo-link:hover::after {
+  width: 0;  
+  content: none;  
+}
+
 .navbar {
   position: fixed; /* Fixa no topo da tela */
   top: 0;
