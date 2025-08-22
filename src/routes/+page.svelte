@@ -9,6 +9,7 @@
 	import Equipe from '$lib/sections/Equipe.svelte';
 	import Galeria from '$lib/sections/Galeria.svelte';
 	import Contato from '$lib/sections/Contato.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   let menuOpen = false
 
@@ -43,6 +44,8 @@
     <Contato />
   </section>
 </main>
+
+<Footer />
 
 
 

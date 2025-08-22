@@ -1,4 +1,4 @@
-<script> 
+<script lang> 
 import Navbar from '$lib/components/Navbar.svelte';
 import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -8,5 +8,3 @@ import Footer from '$lib/components/Footer.svelte';
 <main>
   <h1> Detalhes da inscricao no processo seletivo do PET </h1>
 </main>
-
-<Footer />
