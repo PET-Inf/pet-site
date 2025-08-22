@@ -60,10 +60,12 @@
   }
 
   .bar {
-    width: 600px;
-    height: 2px;
-    background: black;
-    margin-top: 0.25rem; 
+    display: block;          
+    width: 600px;             
+    height: 4px;             
+    background-color: black; 
+    border-radius: 3px;      
+    margin-top: 0.5rem;     
   }
 
   .answer {
