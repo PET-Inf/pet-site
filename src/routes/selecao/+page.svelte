@@ -21,9 +21,40 @@
 </script>
 
 <style>
+  #capa {
+    background-image: url('/pet_sala_selecao.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+    color: white;        
+  }
+  
+  #capa h1 {
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  #capa h2 {
+    font-size: larger;
+    font-weight: 600;
+  }
+
   #FAQ {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 4rem auto;
+  }
+
+  #FAQ h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+    margin-bottom: 2rem;
   }
 
   .faq-item {
@@ -76,8 +107,10 @@
 <Navbar />
 
 <main>
-  <h1>Seleção PET - Informática</h1>
-  <h2>Faça parte do nosso time!</h2>
+  <section id = "capa">
+    <h1>Seleção PET - Informática</h1>
+    <h2>Faça parte do nosso time!</h2>
+  </section>
 
   <section id = "descricao">
     <h5>Descrição</h5>
@@ -111,7 +144,6 @@
 
   <section id="FAQ">
   <h2>Perguntas Frequentes</h2>
-
   {#each faqs as faq, i}
     <div class="faq-item">
       <button type="button" class="question {faq.open ? 'active' : ''}" on:click={() => toggleFAQ(i)}>
