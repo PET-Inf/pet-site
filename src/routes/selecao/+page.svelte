@@ -45,6 +45,35 @@
     font-weight: 600;
   }
 
+  #descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    padding: 2rem;
+  }
+
+  #descricao h5 {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1rem;
+  }
+
+  #descricao p {
+    margin-bottom: 1rem;
+  }
+
+  #descricao ul {
+    list-style-type: disc;   /* bolinha padrão */
+    list-style-position: inside; /* coloca a bolinha dentro do bloco de texto */
+    margin-left: 1.5rem;     /* espaço da margem */
+    padding-left: 0;         /* evita espaço extra */
+  }
+
+  #descricao li {
+    margin-bottom: 0.5rem;   /* espaço entre os itens */
+  }
+
   #FAQ {
     max-width: 600px;
     margin: 4rem auto;
@@ -52,7 +81,7 @@
 
   #FAQ h2 {
     text-align: center;
-    font-weight: 600;
+    font-weight: bold;
     font-size: larger;
     margin-bottom: 2rem;
   }
@@ -113,7 +142,7 @@
   </section>
 
   <section id = "descricao">
-    <h5>Descrição</h5>
+    <h5>Descrição:</h5>
     <p>No PET-Informática, com a orientação de um professor tutor, temos a oportunidade de desenvolver atividades de ensino, pesquisa e extensão com estudantes de diferentes cursos da área da informática, além disso, já desenvolvemos projetos em parceria com empresas do TECNOPUC e grupos de pesquisa dos programas de pós-graduação da PUCRS. Inscreva-se!</p>
     <ul>
       <li>Bolsa: R$ 700,00</li>
