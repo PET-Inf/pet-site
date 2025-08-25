@@ -45,33 +45,37 @@
     font-weight: 600;
   }
 
-  #descricao {
+  #descricao, #requisitos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: justify;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
   }
 
-  #descricao h5 {
+  h5 {
     font-weight: bold;
     font-size: large;
     margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;   /* bolinha padrão */
+    list-style-position: inside; /* coloca a bolinha dentro do bloco de texto */
+    margin-left: 1.5rem;     
+    padding-left: 0;         
+  }
+
+  section > ul ul {
+    list-style-type:circle; 
   }
 
   #descricao p {
     margin-bottom: 1rem;
   }
 
-  #descricao ul {
-    list-style-type: disc;   /* bolinha padrão */
-    list-style-position: inside; /* coloca a bolinha dentro do bloco de texto */
-    margin-left: 1.5rem;     /* espaço da margem */
-    padding-left: 0;         /* evita espaço extra */
-  }
-
   #descricao li {
-    margin-bottom: 0.5rem;   /* espaço entre os itens */
+    margin-bottom: 0.5rem;   
   }
 
   #FAQ {
