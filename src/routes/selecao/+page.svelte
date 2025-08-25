@@ -24,15 +24,13 @@
   #capa {
     background-image: url('/pet_sala_selecao.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     min-height: 90vh;
     display: flex;
     flex-direction: column;  
-    justify-content: center; 
-    align-items: center;     
+    justify-content: center;     
     text-align: center;      
-    color: white;        
+    color: #F0F0F0;        
   }
   
   #capa h1 {
@@ -43,6 +41,12 @@
   #capa h2 {
     font-size: larger;
     font-weight: 600;
+  }
+
+  .container {
+    max-width: 1100px;   /* largura máxima do conteúdo */
+    margin: 0 auto;      /* centraliza horizontalmente */
+    padding: 0 1rem; 
   }
 
   #descricao, #requisitos {
@@ -60,8 +64,8 @@
   }
 
   ul {
-    list-style-type: disc;   /* bolinha padrão */
-    list-style-position: inside; /* coloca a bolinha dentro do bloco de texto */
+    list-style-type: disc;  
+    list-style-position: inside; 
     margin-left: 1.5rem;     
     padding-left: 0;         
   }
@@ -76,6 +80,26 @@
 
   #descricao li {
     margin-bottom: 0.5rem;   
+  }
+
+  #botoes {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  }
+
+  #botoes a {
+    color: #F0F0F0;
+    background-color: #1A447C;
+    padding: 18px 30px;
+    border-radius: 10px;
+  }
+
+  #botoes a:hover {
+    background-color: #045bac;
+    transition: color 3s;
   }
 
   #FAQ {
@@ -139,60 +163,62 @@
 
 <Navbar />
 
-<main>
+<main>  
   <section id = "capa">
     <h1>Seleção PET - Informática</h1>
     <h2>Faça parte do nosso time!</h2>
   </section>
 
-  <section id = "descricao">
-    <h5>Descrição:</h5>
-    <p>No PET-Informática, com a orientação de um professor tutor, temos a oportunidade de desenvolver atividades de ensino, pesquisa e extensão com estudantes de diferentes cursos da área da informática, além disso, já desenvolvemos projetos em parceria com empresas do TECNOPUC e grupos de pesquisa dos programas de pós-graduação da PUCRS. Inscreva-se!</p>
-    <ul>
-      <li>Bolsa: R$ 700,00</li>
-      <li> Carga horária: 4 horas diárias durante a tarde - 20 horas semanais</li>
-    </ul>
-  </section>
-  
-  <section id = "requisitos">
-    <h5>Requisitos:</h5>
-    <ul>
-      <li>Ser aluno de:</li>
+  <div class = "container">
+    <section id = "descricao">
+      <h5>Descrição:</h5>
+      <p>No PET-Informática, com a orientação de um professor tutor, temos a oportunidade de desenvolver atividades de ensino, pesquisa e extensão com estudantes de diferentes cursos da área da informática, além disso, já desenvolvemos projetos em parceria com empresas do TECNOPUC e grupos de pesquisa dos programas de pós-graduação da PUCRS. Inscreva-se!</p>
       <ul>
-        <li>Ciência da Computação</li>
-        <li>Ciência de Dados e Inteligência Artificial</li>
-        <li>Engenharia de Computação</li>
-        <li>Engenharia de Software</li>
-        <li>Sistemas de Informação</li>
+        <li>Bolsa: R$ 700,00</li>
+        <li> Carga horária: 4 horas diárias durante a tarde - 20 horas semanais</li>
       </ul>
-      <li>Não estar vinculado a nenhuma bolsa de pesquisa ou estágio remunerado.</li>
-      <li>Possuir bom rendimento acadêmico.</li>
-    </ul>
+    </section>
+    
+    <section id = "requisitos">
+      <h5>Requisitos:</h5>
+      <ul>
+        <li>Ser aluno de:</li>
+        <ul>
+          <li>Ciência da Computação</li>
+          <li>Ciência de Dados e Inteligência Artificial</li>
+          <li>Engenharia de Computação</li>
+          <li>Engenharia de Software</li>
+          <li>Sistemas de Informação</li>
+        </ul>
+        <li>Não estar vinculado a nenhuma bolsa de pesquisa ou estágio remunerado.</li>
+        <li>Possuir bom rendimento acadêmico.</li>
+      </ul>
+    </section>
+
+    <section id = "botoes">
+      <a href="https://drive.google.com/file/d/1u7Za-UogMTfvVt7gZWn_Iw0OWSxTftKf/view" target="_blank">Edital Completo</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSclq8yLzKJFDFoJHNJWtzLTCsW15EYA1xiyQV7_XErCCobYrw/closedform" target="_blank">Inscreva-se</a>
+    </section>
+
+    <section id="FAQ">
+    <h2>Perguntas Frequentes</h2>
+    {#each faqs as faq, i}
+      <div class="faq-item">
+        <button type="button" class="question {faq.open ? 'active' : ''}" on:click={() => toggleFAQ(i)}>
+          <span class="text">{faq.question}</span>
+          <!-- seta ainda com ::after -->
+          <span class="bar"></span>
+        </button>
+
+        {#if faq.open}
+          <div class="answer">
+            {faq.answer}
+          </div>
+        {/if}
+      </div>
+    {/each}
   </section>
-
-  <section id = "Botões">
-    <a href="https://drive.google.com/file/d/1u7Za-UogMTfvVt7gZWn_Iw0OWSxTftKf/view">Edital Completo</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSclq8yLzKJFDFoJHNJWtzLTCsW15EYA1xiyQV7_XErCCobYrw/closedform">Inscreva-se</a>
-  </section>
-
-  <section id="FAQ">
-  <h2>Perguntas Frequentes</h2>
-  {#each faqs as faq, i}
-    <div class="faq-item">
-      <button type="button" class="question {faq.open ? 'active' : ''}" on:click={() => toggleFAQ(i)}>
-        <span class="text">{faq.question}</span>
-        <!-- seta ainda com ::after -->
-        <span class="bar"></span>
-      </button>
-
-      {#if faq.open}
-        <div class="answer">
-          {faq.answer}
-        </div>
-      {/if}
-    </div>
-  {/each}
-</section>
+</div>
 
 </main>
 
