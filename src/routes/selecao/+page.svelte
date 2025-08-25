@@ -28,24 +28,26 @@
     min-height: 90vh;
     display: flex;
     flex-direction: column;  
-    justify-content: center;     
+    justify-content: center; 
+    align-items: center;    
     text-align: center;      
-    color: #F0F0F0;        
+    color: #F0F0F0;     
+    padding: 1rem;   
   }
-  
+
   #capa h1 {
-    font-size: x-large;
+    font-size: clamp(1rem, 3vw, 2rem);
     font-weight: bolder;
   }
 
   #capa h2 {
-    font-size: larger;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
     font-weight: 600;
   }
 
   .container {
-    max-width: 1100px;   /* largura máxima do conteúdo */
-    margin: 0 auto;      /* centraliza horizontalmente */
+    max-width: 1100px;   
+    margin: 0 auto;      
     padding: 0 1rem; 
   }
 
@@ -59,7 +61,7 @@
 
   h5 {
     font-weight: bold;
-    font-size: large;
+    font-size: clamp(0.6rem, 4vw, 1.4rem);
     margin-bottom: 1rem;
   }
 
@@ -67,7 +69,11 @@
     list-style-type: disc;  
     list-style-position: inside; 
     margin-left: 1.5rem;     
-    padding-left: 0;         
+    padding-left: 0;     
+  }
+
+  ul li {
+    font-size: clamp(0.7rem, 3.2vw, 1rem); 
   }
 
   section > ul ul {
@@ -76,6 +82,7 @@
 
   #descricao p {
     margin-bottom: 1rem;
+    font-size: clamp(0.75rem, 3.5vw, 1.125rem);
   }
 
   #descricao li {
@@ -83,8 +90,9 @@
   }
 
   #botoes {
-    margin-top: 2rem;
+    margin: 2rem 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 2rem;
@@ -93,13 +101,16 @@
   #botoes a {
     color: #F0F0F0;
     background-color: #1A447C;
-    padding: 18px 30px;
+    padding: 1.125rem 1.85rem;
     border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    min-width: 150px;
   }
 
   #botoes a:hover {
     background-color: #045bac;
-    transition: color 3s;
+    transition: background .3s;
   }
 
   #FAQ {
@@ -129,6 +140,9 @@
     cursor: pointer;
     padding: 0.5rem 0;
     font: inherit;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .question::after {
@@ -147,11 +161,10 @@
     transform: translateY(-50%) rotate(-135deg);
   }
 
-  .bar {
-    display: block;          
-    width: 600px;             
+  .bar {     
+    width: 100%;            
     height: 4px;             
-    background-color: black; 
+    background-color: #000000; 
     border-radius: 3px;      
     margin-top: 0.5rem;     
   }
@@ -159,6 +172,40 @@
   .answer {
     padding: 0.5rem 0 0.5rem 1rem;
   } 
+
+  @media (max-width: 768px) {
+    #descricao, #requisitos {
+      padding: 1rem;
+    }
+
+    #FAQ {
+      margin: 2rem 1rem;
+    }
+
+    .bar {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h5 { 
+      font-size: 1rem; 
+    }
+
+    ul { 
+      margin-left: 1rem; 
+    }
+
+    #botoes a { 
+      min-width: unset; 
+      width: 100%; 
+      margin-top: 1rem;
+    }
+
+    .bar {
+      width: 100%;
+    }
+  }
 </style>
 
 <Navbar />
