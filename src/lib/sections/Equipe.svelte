@@ -1,4 +1,6 @@
 <script>
+  import { base } from '$app/paths';
+
   // Mudar aqui quando for preciso atualizar a lista de membros
   const slides = [
     {
@@ -92,7 +94,7 @@
     <div class="carrossel-slides" style="transform: translateX(-{slideIndex * 100}%)">
       {#each slides as slide}
         <div class="carrossel-item">
-          <img src={slide.imgSrc} alt={slide.altText}>
+          <img src={base}{slide.imgSrc} alt={slide.altText}>
           <p>{slide.description}</p>
         </div>
       {/each}

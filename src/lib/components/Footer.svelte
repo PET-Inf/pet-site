@@ -1,3 +1,7 @@
+<script>
+    import { base } from '$app/paths';
+</script>
+
 <style>
     footer {
         background-color: #1E1E1E;
@@ -57,8 +61,8 @@
 <footer>
     <p>Copyright &copy; PET - Informática 2025</p>
     <div class="logos">
-        <img src="logo_PUCRS.png" alt="Logo PUCRS">
-        <img src="logo_MEC.png" alt="Logo MEC">
+        <img src="{base}/logo_PUCRS.png" alt="Logo PUCRS">
+        <img src="{base}/logo_MEC.png" alt="Logo MEC">
     </div>
     <p>Política de Privacidade</p>
 </footer>

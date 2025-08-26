@@ -1,9 +1,12 @@
+<script>
+import { base } from '$app/paths';  
+</script>
+
 <style>
 .banner {
   position: relative;
   width: 100%;
   height: 65vh;
-  background-image: url('pet_sala.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -35,6 +38,6 @@
 }
 </style>
 
-<div class="banner">
+<div class="banner" style="background-image: url({base}/pet_sala.png)">
   <h2>Desde 1991 realizando projetos inovadores!</h2>
 </div>

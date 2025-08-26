@@ -2,6 +2,8 @@
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
 
+  import { base } from '$app/paths';  
+
   type FAQ = {
     question: string;
     answer: string;
@@ -22,7 +24,6 @@
 
 <style>
   #capa {
-    background-image: url('/pet_sala_selecao.png');
     background-size: cover;
     background-position: center;
     min-height: 90vh;
@@ -211,7 +212,7 @@
 <Navbar />
 
 <main>  
-  <section id = "capa">
+  <section id = "capa" style="background-image: url({base}/pet_sala_selecao.png)">
     <h1>Seleção PET - Informática</h1>
     <h2>Faça parte do nosso time!</h2>
   </section>
