@@ -24,7 +24,7 @@
       description: "Eduardo Traunig"
     },
     {
-      imgSrc: "/equipe/erickmachado.jpg",
+      imgSrc: "/equipe/erick.jpg",
       altText: "Foto do Erick",
       description: "Erick Machado"
     },
@@ -42,6 +42,11 @@
       imgSrc: "/equipe/gabrieltomaz.jpg",
       altText: "Foto do Gabriel Tomaz",
       description: "Gabriel Tomaz"
+    },
+    {
+      imgSrc: "/equipe/george.jpg",
+      altText: "Foto do George",
+      description: "George Rother"
     },
     {
       imgSrc: "/equipe/gustavo.png",
