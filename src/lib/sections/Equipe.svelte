@@ -1,5 +1,7 @@
 <script>
   import { base } from '$app/paths';
+  import { pageTitle } from '../../stores';
+  pageTitle.set('PET - Informática');
 
   // Mudar aqui quando for preciso atualizar a lista de membros
   const slides = [
@@ -90,6 +92,10 @@
     slideIndex = novoIndex;
   }
 </script>
+
+<svelte:head>
+  <title>{$pageTitle}</title>
+</svelte:head>
 
 <div class="componente-carrossel-wrapper">
   

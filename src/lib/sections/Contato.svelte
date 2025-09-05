@@ -1,3 +1,8 @@
+<script lang="ts">
+    import { pageTitle } from '../../stores';
+    pageTitle.set('PET - Informática');
+</script>
+
 <style>
 .contato-section {
   width: 100%;
@@ -52,6 +57,10 @@
   }
 }
 </style>
+
+<svelte:head>
+  <title>{$pageTitle}</title>
+</svelte:head>
 
 <section class="contato-section">
   <div class="contato-title">Contatos e Redes Sociais</div>

@@ -4,6 +4,9 @@
 
   import { base } from '$app/paths';  
 
+  import { pageTitle } from '../../stores';
+  pageTitle.set('Seleção | PET - Informática');
+
   type FAQ = {
     question: string;
     answer: string;
@@ -208,6 +211,10 @@
     }
   }
 </style>
+
+<svelte:head>
+  <title>{$pageTitle}</title>
+</svelte:head>
 
 <Navbar />
 

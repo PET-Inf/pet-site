@@ -1,3 +1,8 @@
+<script lang="ts">
+    import { pageTitle } from '../../stores';
+    pageTitle.set('PET - Informática');
+</script>
+
 <style>
 .projects-section {
     text-align: center;
@@ -66,6 +71,11 @@
 }
 
 </style>
+
+<svelte:head>
+  <title>{$pageTitle}</title>
+</svelte:head>
+
 <div class="projects-section">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Projetos</h2>
     <p class="text-lg mb-2">Veja os trabalhos em desenvolvimento!</p>

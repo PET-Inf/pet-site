@@ -1,5 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { pageTitle } from '../../stores';
+  pageTitle.set('PET - Informática');
 </script>
 
 <style>
@@ -127,6 +129,10 @@
     .md\:mb-12 { @media (min-width: 768px) { margin-bottom: 3rem; } }
 
 </style>
+
+<svelte:head>
+  <title>{$pageTitle}</title>
+</svelte:head>
 
 <div class="timeline-section">
 
