@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <style>
     /* Este é o container que ocupa 100% da largura com o fundo azul */
     .timeline-section {
@@ -104,6 +108,14 @@
         font-weight: bold;
         text-align: center;
         z-index: 10;
+    }
+
+    .timeline-bottom-circle:hover {
+        background-color: #045bac;
+        color: #fff;
+        transition: background .3s;
+        text-decoration: none;
+        cursor: pointer;
     }
     
     /* Classes de utilidade que podem estar faltando, como as do Tailwind */
@@ -250,7 +262,7 @@
             </div>
 
             <div class="timeline-bottom-circle">
-                <p>Faça parte da nossa história!</p>
+                <a href="{base}/selecao">Faça parte da nossa história!</a>
             </div>
         </div>
         

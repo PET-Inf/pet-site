@@ -25,11 +25,11 @@
   <section id="sobre">
     <Sobre />
   </section>
+   <section id="projetos">
+    <Projetos />
+  </section>
   <section id="historia">
     <Historia />
-  </section>
-  <section id="projetos">
-    <Projetos />
   </section>
   <section id="talks">
     <Talks />

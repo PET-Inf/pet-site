@@ -22,6 +22,7 @@
         <a href="{base}/#equipe" on:click={closeMenu}>Nossa Equipe</a>
         <a href="{base}/#galeria" on:click={closeMenu}>Galeria</a>
         <a href="{base}/#talks" on:click={closeMenu}>Talks</a>
+        <a href="{base}/selecao" on:click={closeMenu}>Seleção</a>
         <a href="{base}/#contato" on:click={closeMenu}>Contato</a>
       </div>
     {/if}
@@ -39,6 +40,7 @@
     <a href="{base}/#equipe">Nossa Equipe</a>
     <a href="{base}/#galeria">Galeria</a>
     <a href="{base}/#talks">Talks</a>
+    <a href="{base}/selecao">Seleção</a>
     <a href="{base}/#contato">Contato</a>
   </ul>
 </nav>
