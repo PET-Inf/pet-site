@@ -6,5 +6,3 @@
 <svelte:head>
   <title>{$pageTitle}</title>
 </svelte:head>
-
-<h1> Fotos </h1>
