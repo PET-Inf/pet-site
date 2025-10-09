@@ -7,6 +7,17 @@
 		<meta name="google-site-verification" content="zp_OnyErkJQYPvQAAjKbyFSR-3F7LnEeLInt4wa77oA" />
 		%sveltekit.head%
 	</head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F4EDF9FWZ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4F4EDF9FWZ');
+	</script>
+
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
