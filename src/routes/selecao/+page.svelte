@@ -230,7 +230,7 @@
       <p>No PET-Informática, com a orientação de um professor tutor, temos a oportunidade de desenvolver atividades de ensino, pesquisa e extensão com estudantes de diferentes cursos da área da informática, além disso, já desenvolvemos projetos em parceria com empresas do TECNOPUC e grupos de pesquisa dos programas de pós-graduação da PUCRS. Inscreva-se!</p>
       <ul>
         <li>Bolsa: R$ 700,00</li>
-        <li> Carga horária: 4 horas diárias durante a tarde - 20 horas semanais</li>
+        <li> Carga horária: 4 horas diárias - 20 horas semanais</li>
       </ul>
     </section>
     
