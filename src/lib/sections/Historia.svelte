@@ -154,7 +154,6 @@
                 <div class="timeline-content">
                     <h3>1991</h3>
                     <h4>Prof. Dr. Álvaro Guarda</h4>
-                    <p>1º tutor do PET-Inf</p>
                 </div>
                 <div class="timeline-circle image-1"></div>
             </div>
@@ -164,7 +163,6 @@
                 <div class="timeline-content">
                     <h3>1993</h3>
                     <h4>Prof. Dr. Afonso Orth</h4>
-                    <p>2º e 8º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -172,7 +170,6 @@
                 <div class="timeline-content">
                     <h3>1996</h3>
                     <h4>Prof. Dr. Celso Maciel</h4>
-                    <p>3º tutor do PET-Inf, e novamente em 2010</p>
                 </div>
                 <div class="timeline-circle image-1"></div>
             </div>
@@ -182,7 +179,6 @@
                 <div class="timeline-content">
                     <h3>2001</h3>
                     <h4>Prof. Dr. Fabiano Hessel</h4>
-                    <p>4º tutor do PET-Inf</p>
                 </div>
             </div>
             
@@ -191,7 +187,6 @@
                 <div class="timeline-content">
                     <h3>2002</h3>
                     <h4>Prof. Dr. Luís Lamb</h4>
-                    <p>5º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -200,7 +195,6 @@
                 <div class="timeline-content">
                     <h3>2002</h3>
                     <h4>Profa. Dra. Lúcia Giraffa</h4>
-                    <p>6ª tutora do PET-Inf</p>
                 </div>
             </div>
 
@@ -209,7 +203,6 @@
                 <div class="timeline-content">
                     <h3>2005</h3>
                     <h4>Prof. Dr. Alfio Martini</h4>
-                    <p>7º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -218,7 +211,6 @@
                 <div class="timeline-content">
                     <h3>2010</h3>
                     <h4>Prof. Dr. Celso Maciel</h4>
-                    <p>2º e 8º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -227,7 +219,6 @@
                 <div class="timeline-content">
                     <h3>2011</h3>
                     <h4>Prof. Dr. Tiago Ferreto</h4>
-                    <p>9º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -236,7 +227,6 @@
                 <div class="timeline-content">
                     <h3>2018</h3>
                     <h4>Prof. Dr. Alfio Martini</h4>
-                    <p>7º e 10º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -245,7 +235,6 @@
                 <div class="timeline-content">
                     <h3>2019</h3>
                     <h4>Prof. Dr. Rafael Garibotti</h4>
-                    <p>11º tutor do PET-Inf</p>
                 </div>
             </div>
 
@@ -254,16 +243,14 @@
                 <div class="timeline-content">
                     <h3>2020</h3>
                     <h4>Prof. Dr. Tiago Ferreto</h4>
-                    <p>9º e 12º tutor do PET-Inf</p>
                 </div>
             </div>
 
             <div class="timeline-item right">
                 <div class="timeline-circle image-2"></div>
                 <div class="timeline-content">
-                    <h3>2023</h3>
+                    <h3>2023 - Atualmente</h3>
                     <h4>Profa. Dra. Milene Silveira</h4>
-                    <p>13ª tutora do PET-Inf</p>
                 </div>
             </div>
 
