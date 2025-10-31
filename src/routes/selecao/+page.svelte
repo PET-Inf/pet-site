@@ -39,6 +39,15 @@
     padding: 1rem;   
   }
 
+  .capa-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
+  }
+
   #capa h1 {
     font-size: clamp(1rem, 3vw, 2rem);
     font-weight: bolder;
@@ -219,9 +228,11 @@
 <Navbar />
 
 <main>  
-  <section id = "capa" style="background-image: url({base}/pet_sala_selecao.png)">
-    <h1>Seleção PET - Informática</h1>
-    <h2>Faça parte do nosso time!</h2>
+  <section id = "capa" style="background-image: url({base}/PET_sala.jpeg)">
+    <div class = "capa-overlay">
+      <h1>Seleção PET - Informática</h1>
+      <h2>Faça parte do nosso time!</h2>
+    </div>
   </section>
 
   <div class = "container">
