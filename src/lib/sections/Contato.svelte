@@ -25,12 +25,21 @@
   }
 }
 
+/* Redes: layout responsivo e quebra de texto segura */
 .redes-container {
   display: grid;
-  grid-template-columns: repeat(2, auto); /* força duas colunas com largura do conteúdo */
-  gap: 2rem 5rem; /* espaçamento vertical e horizontal */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* ajusta automaticamente colunas */
+  gap: 2rem 2rem; /* espaçamento vertical e horizontal mais uniforme */
   justify-content: center;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rede-link {
+  display: block; /* garante que o link ocupe o espaço da célula */
+  text-decoration: none;
+  color: inherit;
 }
 
 .rede-item {
@@ -39,17 +48,29 @@
   gap: 1rem;
   font-size: 1.125rem;
   color: #333;
+  padding: 0.25rem;
+  min-width: 0; /* permite que o item flex encolha corretamente em containers pequenos */
 }
 
 .rede-item img {
   width: 45px;
   height: 45px;
+  flex: 0 0 auto; /* imagem não encolhe além do definido */
+}
+
+/* Permite que o texto quebre em várias linhas em telas pequenas */
+.rede-item span {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* Layout responsivo para telas menores */
 @media (max-width: 600px) {
   .redes-container {
-    gap: 1.5rem 2rem; /* menos espaço em mobile */
+    gap: 1.5rem 1rem;
+    grid-template-columns: 1fr; /* uma coluna em mobile para evitar cortes */
+    padding: 0 0.5rem;
   }
 
   .rede-item {
