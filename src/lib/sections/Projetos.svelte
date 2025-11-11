@@ -3,7 +3,9 @@
     import { base } from '$app/paths'; 
     pageTitle.set('PET - Informática');
     
-    let selectedProject: { title: any; description: any; technologies: any; status: string; } | null = null;
+    // `technologies` can be optional on some projects, so mark it optional here
+    // `status` remains required because the template uses it for class names
+    let selectedProject: { id?: number; title: string; image?: string; description?: string; technologies?: string[]; status: string; } | null = null;
     let showModal = false;
     
     const projects = [
@@ -26,23 +28,22 @@
         },
         {
             id: 3,
-            title: "Enade App",
-            image: `${base}/projetos/enade.jpg`,
-            description: `O Exame Nacional de Desempenho dos Estudantes (ENADE) é aplicado pelo INEP desde 2004, o objetivo é avaliar o rendimento dos concluintes dos cursos de graduação em relação aos conteúdos programáticos previstos nas diretrizes curriculares dos cursos, o desenvolvimento de competências e habilidades necessárias ao aprofundamento da formação geral e profissional, e o nível de atualização dos estudantes com relação à realidade brasileira e mundial.
-
-                        Os resultados do ENADE, aliados às respostas do Questionário do Estudante, são insumos para o cálculo dos Indicadores de Qualidade da Educação Superior. Conforme o site oficial do INEP, a inscrição é obrigatória para estudantes ingressantes e concluintes habilitados de cursos de bacharelado e superiores de tecnologia vinculados às áreas de avaliação da edição.
-
-                        O ENADEApp é um aplicativo similar aos oferecidos como forma de estudo para o ENEM, ou seja, além de manter as principais informações a respeito do simulado (datas, horário, locais, etc), o foco principal da aplicação é um banco de questões de edições passadas das provas.
-
-                        Os estudantes podem utilizar o aplicativo como uma competição de perguntas e respostas, portanto, o indivíduo que responder corretamente as questões propostas irá somar pontos para ser adicionado ao ranking dos utilizadores do ENADEApp, questões estas que serão divididas em diferentes áreas do conhecimento e cursos.
-
-                        O ENADEApp está em fase de desenvolvimento para Android e IOS com as ferramentas/linguagens a seguir: `,
-            technologies: ["Unity", "SQL", "C#"],
-            status: "Congelado"
+            title: "InterPET",
+            image: `${base}/projetos/interpet.jpeg`,
+            description: `O InterPET da PUCRS é um evento de integração e extensão extracurricular que reúne os diferentes Grupos do Programa de Educação Tutorial (PET) da Universidade e, frequentemente, envolve a comunidade interna e externa. Ele é uma das atividades promovidas pelos Grupos PET (PET Informática, Letras, Biologia e Psicologia) para complementar a formação dos alunos.`,
+            status: "Recorrente"
+        },
+        {
+            id: 4,
+            title: "PET-Talks",
+            image: `${base}/projetos/pet-talks.jpeg`,
+            description: `O PET Talks é um projeto específico do PET-Informática da PUCRS focado em compartilhar conhecimento técnico, profissional e de carreira com a comunidade acadêmica, principalmente os estudantes da área.Ele se configura como um ciclo de palestras e eventos que geralmente traz convidados de destaque.`,
+            status: "Recorrente"
         }
     ];
     
-    function openModal(project: { id: number; title: string; image: string; description: string; technologies: string[]; status: string; }) {
+    // Accept projects where `technologies` may be undefined
+    function openModal(project: { id: number; title: string; image: string; description: string; technologies?: string[]; status: string; }) {
         selectedProject = project;
         showModal = true;
     }
@@ -317,14 +318,16 @@
             <div class="modal-body">
                 <p class="modal-description">{selectedProject.description}</p>
                 
-                <div class="modal-technologies">
-                    <h4>Tecnologias:</h4>
-                    <ul class="tech-list">
-                        {#each selectedProject.technologies as tech}
-                            <li class="tech-item">{tech}</li>
-                        {/each}
-                    </ul>
-                </div>
+                {#if selectedProject.technologies && selectedProject.technologies.length > 0}
+                    <div class="modal-technologies">
+                        <h4>Tecnologias:</h4>
+                        <ul class="tech-list">
+                            {#each selectedProject.technologies as tech}
+                                <li class="tech-item">{tech}</li>
+                            {/each}
+                        </ul>
+                    </div>
+                {/if}
                 
                 <p>
                     <strong>Status:</strong> 
