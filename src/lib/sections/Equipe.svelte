@@ -8,7 +8,7 @@
     {
       imgSrc: "/equipe/milene.png",
       altText: "Foto da Milene",
-      description: "Coordenadora - Milene Silveira"
+      description: "Tutora - Milene Silveira"
     },
     {
       imgSrc: "/equipe/amanda.jpg",
