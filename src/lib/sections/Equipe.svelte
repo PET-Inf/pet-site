@@ -82,7 +82,7 @@
       ingresso: "04/2025",
       social1: "https://github.com/FrancineDelanni",
       social1Icon: faGithub,
-      social2: "www.linkedin.com/in/francine-delanni-89204a244",
+      social2: "https://www.linkedin.com/in/francine-delanni-89204a244",
       social2Icon: faLinkedinIn
     },
 
