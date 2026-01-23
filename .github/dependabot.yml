@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Diferencia dependências de produ  ção de dependências de desenvolvimento
+    groups:
+      devDependencies:
+        patterns:
+          - "*"
+        dependency-type: "development"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
