@@ -1,4 +1,7 @@
 <script lang="ts">
+    import Fa from 'svelte-fa';
+    import {faGithub, faInstagram, faYoutube} from '@fortawesome/free-brands-svg-icons';
+    import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
     import { pageTitle } from '../../stores';
     pageTitle.set('PET - Informática');
 </script>
@@ -25,19 +28,21 @@
   }
 }
 
-/* Redes: layout responsivo e quebra de texto segura */
 .redes-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* ajusta automaticamente colunas */
-  gap: 2rem 2rem; /* espaçamento vertical e horizontal mais uniforme */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
   margin: 0 auto;
   width: 100%;
+  max-width: 800px; 
   box-sizing: border-box;
 }
 
 .rede-link {
-  display: block; /* garante que o link ocupe o espaço da célula */
+  flex: 1 1 300px; 
+  max-width: 45%; 
+  display: block; 
   text-decoration: none;
   color: inherit;
 }
@@ -49,12 +54,13 @@
   font-size: 1.125rem;
   color: #333;
   padding: 0.25rem;
-  min-width: 0; /* permite que o item flex encolha corretamente em containers pequenos */
+  min-width: 0; 
 }
 
-.rede-item img {
-  width: 45px;
-  height: 45px;
+.rede-item :global(svg) {
+  color: #1A447C;
+  width: 50px;
+  height: 50px;
   flex: 0 0 auto; /* imagem não encolhe além do definido */
 }
 
@@ -68,9 +74,15 @@
 /* Layout responsivo para telas menores */
 @media (max-width: 600px) {
   .redes-container {
-    gap: 1.5rem 1rem;
-    grid-template-columns: 1fr; /* uma coluna em mobile para evitar cortes */
-    padding: 0 0.5rem;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1.5rem;
+    padding: 0 1rem; 
+  }
+
+  .rede-link {
+    max-width: 100%; 
+    flex-basis: auto; 
   }
 
   .rede-item {
@@ -86,27 +98,27 @@
 <section class="contato-section">
   <div class="contato-title">Contatos e Redes Sociais</div>
   <div class="redes-container">
-    <a class="rede-link" href="https://www.instagram.com/petinfpucrs" target="_blank">
+    <a class="rede-link" href="https://www.instagram.com/petinfpucrs" target="_blank" rel="noopener noreferrer">
       <div class="rede-item">
-        <img src="instagram_icon.png" alt="Instagram">
+        <Fa icon = {faInstagram}/>
         <span>@petinfpucrs</span>
       </div>
     </a>
-    <a class="rede-link" href="https://www.youtube.com/@petinfpucrs" target="_blank">
+    <a class="rede-link" href="https://www.youtube.com/@petinfpucrs" target="_blank" rel="noopener noreferrer">
       <div class="rede-item">
-        <img src="youtube_icon.png" alt="YouTube">
+        <Fa icon = {faYoutube}/>
         <span>PET Informática PUCRS</span>
       </div>
     </a>
-    <a class="rede-link" href="https://github.com/PET-Inf" target="_blank">
+    <a class="rede-link" href="https://github.com/PET-Inf" target="_blank" rel="noopener noreferrer">
       <div class="rede-item">
-        <img src="github_icon.png" alt="Github">
+        <Fa icon = {faGithub}/>
         <span>PET Inf</span>
       </div>
     </a>
-    <a class="rede-link" href="mailto:petinf.pucrs@gmail.com">
+    <a class="rede-link" href="mailto:petinf.pucrs@gmail.com" rel="noopener noreferrer">
       <div class="rede-item">
-        <img src="email_icon.png" alt="Email">
+        <Fa icon = {faEnvelope}/>
         <span>petinf.pucrs@gmail.com</span>
       </div>
     </a>
