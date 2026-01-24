@@ -1,0 +1,82 @@
+.contato-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contato-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contato-title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.redes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px; 
+  box-sizing: border-box;
+}
+
+.rede-link {
+  flex: 1 1 300px; 
+  max-width: 45%; 
+  display: block; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.rede-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.125rem;
+  color: #333;
+  padding: 0.25rem;
+  min-width: 0; 
+}
+
+.rede-item .icone-rede {
+  color: #1A447C;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto; /* imagem não encolhe além do definido */
+}
+
+/* Permite que o texto quebre em várias linhas em telas pequenas */
+.rede-item span {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 600px) {
+  .redes-container {
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1.5rem;
+    padding: 0 1rem; 
+  }
+
+  .rede-link {
+    max-width: 100%; 
+    flex-basis: auto; 
+  }
+
+  .rede-item {
+    font-size: 1rem;
+  }
+}

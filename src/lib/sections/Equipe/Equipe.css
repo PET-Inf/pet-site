@@ -1,0 +1,217 @@
+.componente-carrossel-wrapper {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.carrossel-titulo {
+    text-align: center;
+    color: #1e293b; 
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem; /* Espaço entre o título e o carrossel */
+    font-weight: 600;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 980px;
+    width: 95%; 
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+.carrossel-slides {
+    display: flex;
+    transition: transform var(--transition-ms, 500ms) ease-in-out;
+    will-change: transform;
+}
+
+.carrossel-item {
+    flex: 0 0 calc(100% / var(--per-view, 1));
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-frame {
+    --avatar-size: 180px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    background: #c1c1c1e3;
+    border: 6px solid #c1c1c1e3;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.carrossel-item p {
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.carrossel-item .nome {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    padding-bottom: 0;
+}
+
+.carrossel-item .posicao {
+    font-style: italic;
+    color: #555;
+}
+
+.carrossel-item .curso {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.carrossel-item .ingresso {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem; /* Adjust gap between icons as needed */
+}
+
+.social-links a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e293b;
+    color: #F0F0F0;
+    transition: all 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+.social-links a:hover, .social-links a:focus {
+    background-color: #1A447C;
+    transition: background .3s;
+    transform: translateY(-2px);
+}
+
+.social-links a:focus {
+    box-shadow: 0 0 0 3px rgba(26,68,124,0.12);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -30px;
+    color: #1e293b;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: none;
+    z-index: 2;
+}
+
+.prev:disabled, .next:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    color: #1e293bc6;
+}
+
+.carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 0 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: none;
+    background: #cbd5e1;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #1e293b;
+}
+
+@media (max-width: 768px) {
+    /* Adicionado ajuste no tamanho do título para telas menores */
+    .carrossel-titulo {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .carrossel-item p {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+        padding: 12px;
+        top: 45%; 
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+
+    .avatar-frame {
+        --avatar-size: 150px;
+        border-width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-container {
+        width: 100%; 
+        border-radius: 0;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .carrossel-item p {
+        font-size: 0.8rem;
+    }
+
+    .avatar-frame {
+        --avatar-size: 170px;
+        border-width: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carrossel-slides {
+        transition: none !important;
+    }
+}

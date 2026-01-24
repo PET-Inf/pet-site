@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { pageTitle } from '../../stores';
+    import { pageTitle } from '../../../stores';
     pageTitle.set('PET - Informática');
 </script>
 

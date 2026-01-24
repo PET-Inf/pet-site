@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths';
-  import { pageTitle } from '../../stores';
+  import { pageTitle } from '../../../stores';
   pageTitle.set('PET - Informática');
 </script>
 
@@ -8,7 +8,7 @@
   <title>{$pageTitle}</title>
 </svelte:head>
 
-<div class="w-screen -ml-[calc(50vw-50%)] bg-[#1A447C] text-white px-4 md:px-8 pt-8 pb-6 box-border">
+<div class="w-screen -ml-[calc(50vw-50%)] bg-[#1A447C] text-white px-4 md:px-8 pt-8 pb-15 box-border">
   <div class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Sobre</div>
 
   <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-y-12 md:gap-y-0 md:gap-x-20 max-w-[1500px] mx-auto">
