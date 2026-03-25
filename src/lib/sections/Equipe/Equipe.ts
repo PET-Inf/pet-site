@@ -44,54 +44,15 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/ana.png", 
-        altText: "Foto da Ana", 
-        description: "Ana Schmitt",
+        imgSrc: "/equipe/gustavo.png", 
+        altText: "Foto do Gustavo", 
+        description: "Gustavo Gallo",
         position: null,
-        course: "Ciência da Computação",
-        ingresso: "05/2023",
-        social1: null,
-        social1Icon: null,
-        social2: "https://www.linkedin.com/in/ana-schmitt",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/eduardo.jpg", 
-        altText: "Foto do Eduardo", 
-        description: "Eduardo Traunig",
-        position: null,
-        course: "Ciência da Computação",
+        course: "Engenharia da Computação",
         ingresso: "09/2024",
-        social1: "https://github.com/etraunig",
+        social1: "https://github.com/gustavgallo",
         social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/eduardo-traunig-a105652b8/",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/erick.jpg", 
-        altText: "Foto do Erick", 
-        description: "Erick Machado",
-        position: null,
-        course: "Ciência da Computação",
-        ingresso: "04/2025",
-        social1: "https://github.com/Erick080",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/erick-branquinho-9a90a72b4",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/francine.jpg", 
-        altText: "Foto da Francine", 
-        description: "Francine Delanni",
-        position: null,
-        course: "Engenharia de Software",
-        ingresso: "04/2025",
-        social1: "https://github.com/FrancineDelanni",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/francine-delanni-89204a244",
+        social2: "https://www.linkedin.com/in/gustavo-tibolla-gallo/",
         social2Icon: faLinkedinIn
     },
 
@@ -109,47 +70,8 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/gabrieltomaz.jpg", 
-        altText: "Foto do Gabriel Tomaz", 
-        description: "Gabriel Tomaz",
-        position: null,
-        course: "Ciência da Computação",
-        ingresso: "04/2025",
-        social1: "https://github.com/Gaeltomaz123",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/gabriel-de-cezaro-tomaz-2618b5241/",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/george.jpg", 
-        altText: "Foto do George",
-        description: "George Rother",
-        position: null,
-        course: "Ciência da Computação",
-        ingresso: "06/2025",
-        social1: "#",
-        social1Icon: faGithub,
-        social2: "#",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/gustavo.png", 
-        altText: "Foto do Gustavo", 
-        description: "Gustavo Gallo",
-        position: null,
-        course: "Engenharia da Computação",
-        ingresso: "09/2024",
-        social1: "https://github.com/gustavgallo",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/gustavo-tibolla-gallo/",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/joaogabriel.jpg", 
-        altText: "Foto do Joao Gabriel", 
+        imgSrc: "/equipe/joao.jpeg", 
+        altText: "Foto do João Gabriel", 
         description: "João Gabriel",
         position: null,
         course: "Ciência da Computação",
@@ -161,28 +83,15 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/mauricio.jpg", 
-        altText: "Foto do Mauricio", 
-        description: "Maurício Alcântara",
+        imgSrc: "/equipe/lucas.jpeg", 
+        altText: "Foto do Lucas", 
+        description: "Lucas Gomes",
         position: null,
-        course: "Ciência da Computação",
+        course: "Engenharia da Computação",
         ingresso: "04/2025",
-        social1: "https://github.com/RockyRickaby",
+        social1: "https://github.com/LucasGonGo",
         social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/mauricio-alcantara-da-luz-204060292/",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
-        imgSrc: "/equipe/stefano.png", 
-        altText: "Foto do Stefano", 
-        description: "Stéfano Carraro",
-        position: null,
-        course: "Engenharia de Software",
-        ingresso: "11/2023",
-        social1: "https://github.com/StefanoDPCarraro",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/stefano-carraro-739326318/",
+        social2: "https://www.linkedin.com/in/lucas-gongo/",
         social2Icon: faLinkedinIn
     },
 
@@ -197,8 +106,151 @@ export const slides: Slide[] = [
         social1Icon: faGithub,
         social2: "https://www.linkedin.com/in/vinicius-ross/",
         social2Icon: faLinkedinIn
-    }
-  ];
+    },
+
+    { 
+        imgSrc: "/equipe/george.jpeg", 
+        altText: "Foto do George",
+        description: "George Rother",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "06/2025",
+        social1: "https://github.com/George-Rot",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/george-rother-4a0602272/", 
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/henrique.jpeg", 
+        altText: "Foto do Henrique",
+        description: "Henrique Horch",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "12/2025",
+        social1: "https://github.com/HorcHenrique",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/henrique-carlesso-pereira-horch-4a42b8378/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/lara.jpeg", 
+        altText: "Foto da Lara",
+        description: "Lara Volpato",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "12/2025",
+        social1: "https://github.com/laravolpato",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/laravolpato/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/leonardo.jpeg", 
+        altText: "Foto do Leonardo",
+        description: "Leonardo Soares",
+        position: null,
+        course: "Engenharia de Software",
+        ingresso: "12/2025",
+        social1: "https://github.com/LeonardoSoares09",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/leonardo-soares-da-silva-063741290/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/marco.jpeg", 
+        altText: "Foto do Marco",
+        description: "Marco Rodegheri",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "12/2025",
+        social1: "https://github.com/MarcoRodegheri",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/marco-rodegheri/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/milena.jpeg", 
+        altText: "Foto da Milena",
+        description: "Milena Bregalda",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "12/2025",
+        social1: "https://github.com/milenabregalda",
+        social1Icon: faGithub,
+        social2: "https://br.linkedin.com/in/milenabregalda",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/vanessa.jpeg", 
+        altText: "Foto da Vanessa",
+        description: "Vanessa Rutkoski",
+        position: null,
+        course: "Engenharia de Software",
+        ingresso: "12/2025",
+        social1: "https://github.com/nessartk",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/nessartk/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/arthur.jpeg", 
+        altText: "Foto do Arthur",
+        description: "Arthur Pascual",
+        position: null,
+        course: "Engenharia de Software",
+        ingresso: "03/2026",
+        social1: "https://github.com/ArthurPascual",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/arthur-vinhas-pascual-1000a8215/",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/gustavosaul.jpeg", 
+        altText: "Foto do Gustavo Saul",
+        description: "Gustavo Saul",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "03/2026",
+        social1: "https://github.com/gustavorsaul",
+        social1Icon: faGithub,
+        social2: "https://github.com/gustavorsaul",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/rafael.jpeg", 
+        altText: "Foto do Rafael",
+        description: "Rafael Urbani",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "03/2026",
+        social1: "github.com/rafaurbani",
+        social1Icon: faGithub,
+        social2: "linkedin.com/in/rafaelurbani",
+        social2Icon: faLinkedinIn
+    },
+
+    { 
+        imgSrc: "/equipe/roger.jpeg", 
+        altText: "Foto do Roger",
+        description: "Roger Ehlert",
+        position: null,
+        course: "Ciência da Computação",
+        ingresso: "03/2026",
+        social1: "https://github.com/RogerEhlert",
+        social1Icon: faGithub,
+        social2: "https://www.linkedin.com/in/roger-ehlert/",
+        social2Icon: faLinkedinIn
+    },
+ ];
 
 
 const BASE_TRANSITION_MS = 500;
