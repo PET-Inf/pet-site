@@ -135,19 +135,6 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/lara.jpeg", 
-        altText: "Foto da Lara",
-        description: "Lara Volpato",
-        position: null,
-        course: "Ciência da Computação",
-        ingresso: "12/2025",
-        social1: "https://github.com/laravolpato",
-        social1Icon: faGithub,
-        social2: "https://www.linkedin.com/in/laravolpato/",
-        social2Icon: faLinkedinIn
-    },
-
-    { 
         imgSrc: "/equipe/leonardo.jpeg", 
         altText: "Foto do Leonardo",
         description: "Leonardo Soares",
@@ -221,7 +208,7 @@ export const slides: Slide[] = [
         ingresso: "03/2026",
         social1: "https://github.com/gustavorsaul",
         social1Icon: faGithub,
-        social2: "https://github.com/gustavorsaul",
+        social2: "https://www.linkedin.com/in/gustavo-saul/",
         social2Icon: faLinkedinIn
     },
 
@@ -232,9 +219,9 @@ export const slides: Slide[] = [
         position: null,
         course: "Ciência da Computação",
         ingresso: "03/2026",
-        social1: "github.com/rafaurbani",
+        social1: "https://github.com/rafaurbani",
         social1Icon: faGithub,
-        social2: "linkedin.com/in/rafaelurbani",
+        social2: "https://linkedin.com/in/rafaelurbani",
         social2Icon: faLinkedinIn
     },
 
