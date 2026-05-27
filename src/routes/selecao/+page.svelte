@@ -11,6 +11,7 @@
 
 <svelte:head>
   <title>{$pageTitle}</title>
+  <meta name="description" content="Saiba como participar do processo seletivo do PET-Informática da PUCRS." />
 </svelte:head>
 
 <Navbar />
