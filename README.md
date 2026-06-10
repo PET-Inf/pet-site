@@ -56,7 +56,7 @@ Para executar o projeto em seu ambiente de desenvolvimento, siga os passos abaix
 
 2. **Clonar o Repositório**:
    ```bash
-   git clone [https://github.com/pet-inf/pet-site.git](https://github.com/pet-inf/pet-site.git)
+   git clone https://github.com/pet-inf/pet-site.git
    cd pet-site
    ```
 
