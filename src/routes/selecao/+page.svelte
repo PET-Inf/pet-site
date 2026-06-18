@@ -51,7 +51,7 @@
     </section>
 
     <section id = "botoes">
-      <a href="/EditalSelecao_PETInformatica_jun2026.pdf" target="_blank">Edital Completo</a>
+      <a href="{base}/EditalSelecao_PETInformatica_jun2026.pdf" target="_blank">Edital Completo</a>
       <a href="https://forms.gle/pCfE5jfyNs5VKSmVA" target="_blank">Inscreva-se</a>
     </section>
 
