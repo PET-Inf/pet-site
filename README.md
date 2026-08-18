@@ -1,86 +1,36 @@
-# Site do PET-Informática PUCRS
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Este é o repositório do site institucional do grupo PET-Informática da PUCRS. O projeto foi desenvolvido para modernizar a presença online do grupo, facilitar a divulgação de suas atividades e fortalecer a comunicação com a comunidade.
+## Getting Started
 
-## 📜 Sobre o Projeto
+First, run the development server:
 
-O Programa de Educação Tutorial (PET) é uma iniciativa do governo federal que busca proporcionar uma formação acadêmica integrada através de atividades de ensino, pesquisa e extensão. O PET-Informática da PUCRS, inserido nesse contexto, reúne estudantes da área de tecnologia para desenvolver projetos que vão além do currículo formal.
-
-A necessidade de um novo site surgiu devido às dificuldades de manutenção da versão anterior. Este projeto foi desenvolvido de forma colaborativa pelos membros do grupo, com o objetivo de criar uma plataforma digital moderna, de fácil acesso e que amplie a visibilidade das ações do PET-Informática.
-
-## 🛠️ Arquitetura e Tecnologias
-
-O site foi construído utilizando tecnologias modernas de desenvolvimento web, com foco em performance, manutenibilidade e uma boa experiência de usuário.
-
-### Tecnologias Principais
-
-- ⚡ **SvelteKit**: O framework oficial para Svelte que fornece roteamento baseado em arquivos, geração de sites estáticos (SSG) e gerenciamento global da aplicação.
-- 🎨 **Svelte**: Um compilador que transforma componentes em código JavaScript altamente eficiente e sem runtime, resultando em uma aplicação extremamente rápida.
-- 📘 **TypeScript**: Adiciona tipagem estática ao JavaScript, o que ajuda a prevenir bugs em tempo de desenvolvimento e melhora a manutenibilidade do código.
-- 🚀 **Vite**: Uma ferramenta de build ultrarrápida que oferece uma experiência de desenvolvimento ágil com Hot Module Replacement (HMR).
-- 💨 **Tailwind CSS**: Um framework CSS *utility-first* utilizado para construir designs responsivos e customizados diretamente nas classes dos elementos.
-- 🌐 **GitHub Pages**: Plataforma onde o site é hospedado de forma estática e gratuita, simplificando o processo de deploy.
-
-### Estrutura do Projeto
-
-A estrutura de pastas do projeto está organizada da seguinte forma:
-
-```text
-/
-├── .github/
-│   ├── workflows/        # Workflows do GitHub Actions (Deploy e CI)
-│   └── dependabot.yml    # Configuração de atualizações automáticas de dependências
-├── src/
-│   ├── lib/
-│   │   ├── components/   # Componentes reutilizáveis (Navbar, Footer, etc.)
-│   │   └── sections/     # Seções da página principal (Início, Sobre, Projetos, etc.)
-│   ├── routes/           # Sistema de rotas baseado em arquivos do SvelteKit
-│   └── app.html          # Template HTML principal da aplicação
-├── static/               # Arquivos estáticos públicos (imagens, ícones, fontes, etc.)
-├── package.json          # Dependências e scripts do projeto
-└── svelte.config.js      # Configurações de adapters e pré-processadores do SvelteKit
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## ⚙️ Integração Contínua e Manutenibilidade
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Para garantir a qualidade, a segurança e a automação do projeto, o repositório conta com:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- 🔄 **Deploy Automatizado (CI/CD)**: Configurado via GitHub Actions (`deploy.yml`), que realiza o build e publica a versão estável automaticamente no GitHub Pages sempre que um push é feito na branch `main` ou um Pull Request é integrado.
-- 🛡️ **Dependabot**: Configuração ativa (`dependabot.yml`) que monitora semanalmente as dependências do ecossistema NPM e do GitHub Actions, abrindo Pull Requests automáticos para corrigir vulnerabilidades de segurança e manter os pacotes atualizados.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🚀 Como Rodar o Projeto
+## Learn More
 
-Para executar o projeto em seu ambiente de desenvolvimento, siga os passos abaixo:
+To learn more about Next.js, take a look at the following resources:
 
-1. **Pré-requisitos**: Certifique-se de ter o [Node.js](https://nodejs.org/) (**versão 20 ou superior**) e o [npm](https://www.npmjs.com/) instalados em sua máquina.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-2. **Clonar o Repositório**:
-   ```bash
-   git clone https://github.com/pet-inf/pet-site.git
-   cd pet-site
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-3.  **Instalar as Dependências**:
-    ```bash
-    npm install
-    ```
+## Deploy on Vercel
 
-4.  **Executar o Servidor de Desenvolvimento**:
-    ```bash
-    npm run dev
-    ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-    Após executar o comando, o site estará disponível localmente em `http://localhost:5173`.
-
-## ⌨️ Scripts Disponíveis
-
-Este projeto inclui vários scripts para facilitar o desenvolvimento e a manutenção:
-
--   `npm run dev`: Inicia o servidor de desenvolvimento com hot-reload.
--   `npm run build`: Gera a versão de produção do site na pasta `build/`.
--   `npm run preview`: Inicia um servidor local para visualizar a versão de produção.
--   `npm run check`: Executa o Svelte-check para verificar erros de tipo e outros problemas no código.
--   `npm run lint`: Executa o ESLint para analisar o código e encontrar problemas.
--   `npm run format`: Formata todo o código do projeto utilizando o Prettier.
--   `npm run test`: Executa os testes unitários com o Vitest.
--   `npm run test:unit`: Executa os testes unitários em modo de observação (watch mode).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
