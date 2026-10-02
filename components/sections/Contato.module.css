@@ -1,0 +1,80 @@
+.contatoSection {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contatoTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contatoTitle {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.redesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.redeLink {
+  flex: 1 1 300px;
+  max-width: 45%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.redeItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.125rem;
+  color: #333;
+  padding: 0.25rem;
+  min-width: 0;
+}
+
+.redeItem .iconeRede {
+  color: #1A447C;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+}
+
+.redeItem span {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .redesContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .redeLink {
+    max-width: 100%;
+    flex-basis: auto;
+  }
+
+  .redeItem {
+    font-size: 1rem;
+  }
+}

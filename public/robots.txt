@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pet-inf.github.io/pet-site/sitemap.xml

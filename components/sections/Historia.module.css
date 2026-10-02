@@ -1,0 +1,212 @@
+.timelineSection {
+    background-color: #1A447C;
+    color: #FFFFFF;
+    padding: 3rem 0;
+}
+
+.contentContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #FFFFFF;
+    transform: translateX(-50%);
+    transition: height 0.3s ease;
+    z-index: 0;
+}
+
+.timeline:not(.collapsed)::before {
+    height: calc(100% - 70px);
+}
+
+.timeline.collapsed::before {
+    height: calc(100% - 80px);
+}
+
+.timelineItem {
+    position: relative;
+    width: 50%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+    padding-right: 50px;
+    justify-content: flex-end;
+}
+
+.right {
+    left: 50%;
+    padding-left: 50px;
+    justify-content: flex-start;
+}
+
+.timelineContent {
+    max-width: 100%;
+}
+
+.left .timelineContent {
+    text-align: right;
+}
+
+.right .timelineContent {
+    text-align: left;
+}
+
+.timelineContent h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.timelineContent h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+
+.timelineCircle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
+.left .timelineCircle {
+    right: -12px;
+}
+
+.right .timelineCircle {
+    left: -12px;
+}
+
+.timelineBottomCircle {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #1A447C;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+}
+
+.timelineBottomCircle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.timelineBottomCircle:hover {
+    background-color: #045bac;
+    color: #fff;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+.verMaisContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem 0;
+    position: relative;
+    z-index: 20;
+}
+
+.verMais {
+    background: #fff;
+    color: #1A447C;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background .12s, color .12s, transform .08s;
+    position: relative;
+}
+
+.verMais:hover,
+.verMais:focus {
+    background-color: #045bac;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.verMais:focus {
+    box-shadow: 0 0 0 3px rgba(26,68,124,0.12);
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        padding: 0 0.5rem;
+    }
+
+    .timelineItem {
+        margin-bottom: 40px;
+    }
+
+    .left {
+        padding-right: 35px;
+    }
+
+    .right {
+        padding-left: 35px;
+    }
+
+    .timelineContent h3 {
+        font-size: 1rem;
+    }
+
+    .timelineContent h4 {
+        font-size: 0.95rem;
+    }
+
+    .timelineContent p {
+        font-size: 0.85rem;
+    }
+
+    .timelineCircle {
+        width: 18px;
+        height: 3px;
+    }
+
+    .left .timelineCircle {
+        right: -9px;
+    }
+
+    .right .timelineCircle {
+        left: -9px;
+    }
+
+    .timeline:not(.collapsed)::before {
+        height: calc(100% - 90px);
+    }
+
+    .verMais {
+        margin-bottom: 30px;
+    }
+}

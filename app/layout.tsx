@@ -1,37 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Comic_Neue } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
-import Header from '@/components/Header';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const comicNeue = Comic_Neue({
-  variable: "--font-comic-neue",
-  subsets: ["latin"],
-  weight: ["400", "700"]
 });
 
 export const metadata: Metadata = {
-  title: "(dev)PET - Informática",
+  title: "PET - Informática",
   description: "Site oficial do PET Informática da PUCRS.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${comicNeue.variable}`}>
-        <Header />
+      <body className={`${quicksand.variable} font-sans`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
