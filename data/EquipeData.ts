@@ -6,18 +6,18 @@ export type Slide = {
     imgSrc: string;
     altText: string;
     description: string;
-    position: string | null;
+    position: string | "Petiano";
     course: string;
     ingresso?: string;
-    social1: string | null;
-    social1Icon: ElementType | null;
-    social2: string | null;
-    social2Icon: ElementType | null;
+    social1: string | "Petiano";
+    social1Icon: ElementType | "Petiano";
+    social2: string | "Petiano";
+    social2Icon: ElementType | "Petiano";
 };
 
 export const slides: Slide[] = [
     { 
-        imgSrc: "/equipe/milene.png", 
+        imgSrc: "/fotos_equipe/milene.png", 
         altText: "Foto da Milene", 
         description: "Milene Silveira",
         position: "Tutora",
@@ -29,10 +29,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/amanda.jpg", 
+        imgSrc: "/fotos_equipe/amanda.jpg", 
         altText: "Foto da Amanda", 
         description: "Amanda Luiz",
-        position: null,
+        position: "Petiano",
         course: "Sistemas da Informação",
         ingresso: "11/2023",
         social1: "http://github.com/mattsue",
@@ -42,10 +42,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/gustavo.png", 
+        imgSrc: "/fotos_equipe/gustavo.png", 
         altText: "Foto do Gustavo", 
         description: "Gustavo Gallo",
-        position: null,
+        position: "Petiano",
         course: "Engenharia da Computação",
         ingresso: "09/2024",
         social1: "https://github.com/gustavgallo",
@@ -55,10 +55,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/gabriel.jpg", 
+        imgSrc: "/fotos_equipe/gabriel.jpg", 
         altText: "Foto do Gabriel Bremm", 
         description: "Gabriel Bremm",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "04/2025",
         social1: "https://github.com/gbremm",
@@ -68,10 +68,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/joao.jpeg", 
+        imgSrc: "/fotos_equipe/joao.jpeg", 
         altText: "Foto do João Gabriel", 
         description: "João Gabriel",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "04/2025",
         social1: "http://github.com/JhanosC",
@@ -81,10 +81,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/lucas.jpeg", 
+        imgSrc: "/fotos_equipe/lucas.jpeg", 
         altText: "Foto do Lucas", 
         description: "Lucas Gomes",
-        position: null,
+        position: "Petiano",
         course: "Engenharia da Computação",
         ingresso: "04/2025",
         social1: "https://github.com/LucasGonGo",
@@ -94,10 +94,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/vinicius.jpg", 
+        imgSrc: "/fotos_equipe/vinicius.jpg", 
         altText: "Foto do Vinicius", 
         description: "Vinícius Ross",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "04/2025",
         social1: "https://github.com/viniross",
@@ -107,10 +107,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/george.jpeg", 
+        imgSrc: "/fotos_equipe/george.jpeg", 
         altText: "Foto do George",
         description: "George Rother",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "06/2025",
         social1: "https://github.com/George-Rot",
@@ -120,10 +120,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/henrique.jpeg", 
+        imgSrc: "/fotos_equipe/henrique.jpeg", 
         altText: "Foto do Henrique",
         description: "Henrique Horch",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "12/2025",
         social1: "https://github.com/HorcHenrique",
@@ -133,10 +133,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/leonardo.jpeg", 
+        imgSrc: "/fotos_equipe/leonardo.jpeg", 
         altText: "Foto do Leonardo",
         description: "Leonardo Soares",
-        position: null,
+        position: "Petiano",
         course: "Engenharia de Software",
         ingresso: "12/2025",
         social1: "https://github.com/LeonardoSoares09",
@@ -146,10 +146,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/marco.jpeg", 
+        imgSrc: "/fotos_equipe/marco.jpeg", 
         altText: "Foto do Marco",
         description: "Marco Rodegheri",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "12/2025",
         social1: "https://github.com/MarcoRodegheri",
@@ -159,10 +159,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/milena.jpeg", 
+        imgSrc: "/fotos_equipe/milena.jpeg", 
         altText: "Foto da Milena",
         description: "Milena Bregalda",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "12/2025",
         social1: "https://github.com/milenabregalda",
@@ -172,10 +172,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/vanessa.jpeg", 
+        imgSrc: "/fotos_equipe/vanessa.jpeg", 
         altText: "Foto da Vanessa",
         description: "Vanessa Rutkoski",
-        position: null,
+        position: "Petiano",
         course: "Engenharia de Software",
         ingresso: "12/2025",
         social1: "https://github.com/nessartk",
@@ -185,10 +185,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/arthur.jpeg", 
+        imgSrc: "/fotos_equipe/arthur.jpeg", 
         altText: "Foto do Arthur",
         description: "Arthur Pascual",
-        position: null,
+        position: "Petiano",
         course: "Engenharia de Software",
         ingresso: "03/2026",
         social1: "https://github.com/ArthurPascual",
@@ -198,10 +198,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/gustavosaul.jpeg", 
+        imgSrc: "/fotos_equipe/gustavosaul.jpeg", 
         altText: "Foto do Gustavo Saul",
         description: "Gustavo Saul",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "03/2026",
         social1: "https://github.com/gustavorsaul",
@@ -211,10 +211,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/rafael.jpeg", 
+        imgSrc: "/fotos_equipe/rafael.jpeg", 
         altText: "Foto do Rafael",
         description: "Rafael Urbani",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "03/2026",
         social1: "https://github.com/rafaurbani",
@@ -224,10 +224,10 @@ export const slides: Slide[] = [
     },
 
     { 
-        imgSrc: "/equipe/roger.jpeg", 
+        imgSrc: "/fotos_equipe/roger.jpeg", 
         altText: "Foto do Roger",
         description: "Roger Ehlert",
-        position: null,
+        position: "Petiano",
         course: "Ciência da Computação",
         ingresso: "03/2026",
         social1: "https://github.com/RogerEhlert",

@@ -1,41 +1,117 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { slides } from '@/data/EquipeData';
+import styles from './Equipe.module.css';
 
 export default function Equipe() {
-  return (
-    <div className="componente-carrossel-wrapper max-w-[1500px] mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Equipe do PET</h2>
+  const [perPage, setPerPage] = useState(5);
+  const [page, setPage] = useState(0);
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
+  const [animKey, setAnimKey] = useState(0);
 
-      <div className="flex flex-wrap justify-center gap-8">
-        {slides.map((slide, i) => (
-          <div key={i} className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg w-72"> 
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-200 mb-4">
-              <Image className="w-full h-full object-cover" src={slide.imgSrc} alt={slide.altText} width={128} height={128} />
+  useEffect(() => {
+    const handleResize = () => {
+      let newPerPage = 5;
+      if (window.innerWidth < 640) newPerPage = 1;
+      else if (window.innerWidth < 850) newPerPage = 2;
+      else if (window.innerWidth < 1100) newPerPage = 3;
+      else if (window.innerWidth < 1350) newPerPage = 4;
+      
+      setPerPage(newPerPage);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalPages = Math.ceil(slides.length / perPage);
+  const safePage = Math.min(page, Math.max(0, totalPages - 1));
+
+  function navigate(next: number, dir: 'left' | 'right') {
+    setDirection(dir);
+    setAnimKey((k) => k + 1);
+    setPage(next);
+  }
+
+  const visible = slides.slice(safePage * perPage, safePage * perPage + perPage);
+
+  return (
+    <div className={`componente-carrossel-wrapper ${styles.wrapper}`}>
+      <h2 className={styles.title}>Equipe do PET</h2>
+
+      {/* Cards */}
+      <div
+        key={animKey}
+        className={`${styles.cardsContainer} ${
+          direction === 'right' ? styles.slideRight : styles.slideLeft
+        }`}
+      >
+        {visible.map((slide, i) => (
+          <div key={safePage * perPage + i} className={styles.card} suppressHydrationWarning>
+            <div className={styles.avatarWrapper}>
+              <Image className={styles.avatarImage} src={slide.imgSrc} key={slide.imgSrc} alt={slide.altText} width={130} height={130} />
             </div>
-            <p className="text-xl font-bold text-gray-800 text-center">{slide.description}</p>
-            <p className="text-sm text-gray-600 text-center mb-2">{slide.course}</p>
+            <p className={styles.name}>{slide.description}</p>
+            <p className={styles.course}>{slide.course}</p>
             {slide.ingresso && (
-              <p className="text-xs text-gray-500 mb-1">Ingresso: {slide.ingresso}</p>
+              <p className={styles.ingresso}>Ingresso: {slide.ingresso}</p>
             )}
             {slide.position && (
-              <p className="text-xs font-semibold text-blue-600 mb-3">{slide.position}</p>
+              <p className={styles.position}>{slide.position}</p>
             )}
-            <div className="flex gap-4 mt-auto pt-4">
+            <div className={styles.socialLinks}>
               {slide.social1 && slide.social1 !== '#' && slide.social1Icon && (
-                <a href={slide.social1} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  {React.createElement(slide.social1Icon, { size: 24 })}
+                <a href={slide.social1} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  {React.createElement(slide.social1Icon, { size: 30 })}
                 </a>
               )}
               {slide.social2 && slide.social2 !== '#' && slide.social2Icon && (
-                <a href={slide.social2} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  {React.createElement(slide.social2Icon, { size: 24 })}
+                <a href={slide.social2} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  {React.createElement(slide.social2Icon, { size: 30 })}
                 </a>
               )}
             </div>
           </div>
         ))}
       </div>
+
+      {/* Navegação */}
+      <div className={styles.nav}>
+        <button
+          onClick={() => navigate((safePage - 1 + totalPages) % totalPages, 'left')}
+          className={styles.navBtn}
+          aria-label="Página anterior"
+        >
+          ← Anterior
+        </button>
+
+        {/* Dots */}
+        <div className={styles.dots}>
+          {Array.from({ length: totalPages }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => navigate(idx, idx > safePage ? 'right' : 'left')}
+              className={`${styles.dot} ${idx === safePage ? styles.dotActive : ''}`}
+              aria-label={`Página ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={() => navigate((safePage + 1) % totalPages, 'right')}
+          className={styles.navBtn}
+          aria-label="Próxima página"
+        >
+          Próxima →
+        </button>
+      </div>
+
+      <p className={styles.counter} suppressHydrationWarning>
+        {safePage + 1} / {totalPages}
+      </p>
     </div>
   );
 }

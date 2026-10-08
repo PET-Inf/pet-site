@@ -5,9 +5,6 @@ export default function Sobre() {
   return (
     <>
 
-
-
-
 <div className="w-screen -ml-[calc(50vw-50%)] bg-[#1A447C] text-white px-4 md:px-8 pt-8 pb-15 box-border">
   <div className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Sobre</div>
 
@@ -16,7 +13,7 @@ export default function Sobre() {
 
     <div className="flex flex-col items-center text-center w-full md:w-[700px] px-4">
       <div className="w-[100px] h-[100px] rounded-full overflow-hidden border-2 border-white mb-2">
-        <Image src="/pet_gov.png" alt="Logo do PET pelo MEC" className="w-full h-full object-cover" width={150} height={150}/>
+        <Image src="/logos/pet_gov.png" alt="Logo do PET pelo MEC" className="w-full h-full object-cover" width={150} height={150}/>
       </div>
       <div className="font-bold text-lg mb-2">O Programa</div>
       <div className="text-base">

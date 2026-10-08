@@ -20,7 +20,7 @@ export const projetos: Project[] = [
     {
         id: 2,
         title: "Site do PET",
-        image: `/projetos/site_PET.png`,
+        image: `/projetos/site_PET_2.png`,
         description: "O site que você está acessando agora!",
         technologies: ["Next.js", "TypeScript", "Tailwind"],
         status: "Em desenvolvimento"
@@ -28,7 +28,7 @@ export const projetos: Project[] = [
     {
         id: 3,
         title: "InterPET",
-        image: `/projetos/interpet.jpeg`,
+        image: `/projetos/interpet_2.jpeg`,
         description: `O InterPET da PUCRS é um evento de integração e extensão extracurricular que reúne os diferentes Grupos do Programa de Educação Tutorial (PET) da Universidade e, frequentemente, envolve a comunidade interna e externa. Ele é uma das atividades promovidas pelos Grupos PET (PET Informática, Letras, Biologia e Psicologia) para complementar a formação dos alunos.`,
         status: "Recorrente"
     },
@@ -42,15 +42,15 @@ export const projetos: Project[] = [
     {
         id: 5,
         title: "Letramento Digital",
-        image: "/projetos/pet_talks.jpeg",
-        description: ".",
+        image: "/projetos/letramento_digital.jpeg",
+        description: "O Letramento Digital visa o ensino sobre o uso básico de computadores para pessoas idosas. Temos 3 turmas com aulas semanais!",
         status: "Em andamento"
     },
     {
         id: 6,
-        title: "CESMAR",
-        image: "/projetos/pet_talks.jpeg",
-        description: ".",
+        title: "Ensino de IA com o CESMAR",
+        image: "/projetos/cesmar.jpeg",
+        description: "Este projeto com o Centro Social Marista (CESMAR) visa ensinar aos seus integrantes sobre o uso correto de inteligência artificial. São três encontros que irão ocorrem no segundo semestre de 2026.",
         status: "Em andamento"
     }
 ];
